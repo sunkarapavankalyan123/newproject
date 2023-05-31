@@ -1,0 +1,22 @@
+version: '3'
+services:
+  metro:
+    image: pavan17761a0253/phonepaymetro:v1
+    ports:
+      - "8001:80"
+    deploy:
+      replicas: 3
+
+  dish:
+    image: pavan17761a0253/phonepaydish:v1
+    ports:
+      - "8002:80"
+    deploy:
+      replicas: 3
+      
+  mobile:
+    image: pavan17761a0253/phonepaymobile:v1
+    ports:
+      - "8003:80"
+    deploy:
+      replicas: 3
